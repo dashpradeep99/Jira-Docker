@@ -9,13 +9,14 @@ On crash-recovery have a backup of /dockerdata. System will build up from scratc
 - clone dir
 - Execute docker-compose up on each directory
 
-# Tip
+# Tip and useful scripts
 
-To do things, easier, you can use some aliases instead of docker-compose full syntax commands ;) Just do dockerup on each dir ;)
+To do things, easier, you can use some aliases instead of docker-compose full syntax commands ;)
+Just do dockerup on each dir ;)
 
-alias dockerup='docker-compose up --build'
-alias dockerdown='docker-compose down --remove-orphans'
-alias dockerrm='docker-compose rm -v'
-alias dockerinit='docker stop $(docker ps -a -q) ;  docker rm $(docker ps -a -q
+* alias dockerup='docker-compose up --build'
+* alias dockerdown='docker-compose down --remove-orphans'
+* alias dockerrm='docker-compose rm -v'
+* alias dockerinit='docker stop $(docker ps -a -q) ;  docker rm $(docker ps -a -q
 
 
