@@ -5,7 +5,7 @@ Using docker-compose v3
 ![Screenshot](screenshot.png)
 
 This docker images provides images for Atlassian JIRA, Bitbucket and Gitlab.
-The install is clean, you hace to configure db, etc. Just read the docker-compose files ;)
+The install is clean, you have to configure db, etc. Just read the docker-compose files ;)
 On crash-recovery have a backup of /dockerdata. System will build up from scratch without losing any data.
 
 # Installation
@@ -23,6 +23,6 @@ Just do dockerup on each dir ;)
 * alias dockerrm='docker-compose rm -v'
 * alias dockerinit='docker stop $(docker ps -a -q) ;  docker rm $(docker ps -a -q)'
 
-
+@manufy - Manuel Fernández Yáñez 2017
 
 
