@@ -4,9 +4,9 @@ Using docker-compose v3
 
 ![Screenshot](screenshot.png)
 
-This docker images provides images for Atlassian JIRA, Bitbucket and Gitlab.
+This docker images provides a working environment with Atlassian JIRA, Bitbucket and Gitlab.
 The install is clean, you have to configure db, etc. Just read the docker-compose files ;)
-On crash-recovery have a backup of /dockerdata. System will build up from scratch without losing any data.
+But the data will be all persisted. If you have to migrate server or do some crash-recovery, just have a backup of /dockerdata. System will build up from scratch without losing any data.
 
 # Installation
 
