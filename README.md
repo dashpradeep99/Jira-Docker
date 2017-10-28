@@ -19,6 +19,6 @@ Just do dockerup on each dir ;)
 * alias dockerrm='docker-compose rm -v'
 * alias dockerinit='docker stop $(docker ps -a -q) ;  docker rm $(docker ps -a -q)'
 
-![Alt text](screenshot.png?raw=true "Title")
+![What is this](screenshot.png)
 
 
