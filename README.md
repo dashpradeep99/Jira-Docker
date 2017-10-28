@@ -25,8 +25,6 @@ On crash-recovery have a backup of /dockerdata. System will build up from scratc
 
 **NOTE: Data are persisted at /dockerdata on host. Change it to your needs if you want at the docker-compose files**
 
-# Arcdhiu
-
 # Tips and useful scripts
 
 To do things, easier, you can use some aliases instead of docker-compose full syntax commands ;)
