@@ -1,4 +1,6 @@
-# docker-jira-bitbucket-gitlab
+# JIRA Bitbucket and Gitlab on docker containers with local storage
+
+Using docker-compose v3
 
 ![Screenshot](screenshot.png)
 
@@ -11,7 +13,7 @@ On crash-recovery have a backup of /dockerdata. System will build up from scratc
 - clone dir
 - Execute docker-compose up on each directory
 
-# Tip and useful scripts
+# Tips and useful scripts
 
 To do things, easier, you can use some aliases instead of docker-compose full syntax commands ;)
 Just do dockerup on each dir ;)
