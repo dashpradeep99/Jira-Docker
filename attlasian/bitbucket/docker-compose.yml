@@ -1,0 +1,46 @@
+# Docker stack for Atlassian Bitbucket wih PostrgreSQL 
+# When setup, db: bitbucketpg user: bitcucketpg password: bitbuckermaster host: bitbucket-db
+# Bitbucket and Postgress runs on separate network and have local filesystem persistence to /dockerdata/bitbucket-db and /dockerdata/bitbucket-server
+
+# Command-line equivalent to:
+#!/bin/bash
+#docker run -v /dockerdata/bitbucket/:/var/atlassian/application-data/bitbucket --name="atman-bitbucket" -d -p 8083:7990 -p 7999:7999 atlassian/bitbucket-server
+
+# @manufy 2017 - Manuel Fernández Yáñez http://redgreenrefactor.blogsite.org
+
+version: '3'
+
+services:
+
+  bitbucket:
+  
+    image: atlassian/bitbucket-server         
+    ports:
+        - 8083:7990
+        - 7999:7999
+        
+    volumes:
+       - /dockerdata/bitbucket-server/:/var/atlassian/application-data/bitbucket 
+    depends_on:
+      - bitbucket-db
+    networks:
+      - bitbucket-network
+
+  bitbucket-db:
+    
+    image: postgres    
+    environment:
+       - POSTGRES_PASSWORD=bitbucketmaster
+       - POSTGRES_USER=bitbucketpg
+    volumes: 
+      - /dockerdata/bitbucket-db:/var/lib/postgresql/data
+    networks:
+      - bitbucket-network
+      
+networks:
+  bitbucket-network:
+    driver: bridge
+    
+    
+       
+   
