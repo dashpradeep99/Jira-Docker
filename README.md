@@ -10,8 +10,22 @@ On crash-recovery have a backup of /dockerdata. System will build up from scratc
 
 # Installation
 
-- clone dir
-- Execute docker-compose up on each directory
+* clone dir
+* change docker-compose as you need, but it works out of the box
+* Execute docker-compose up on each directory
+* open http://localhost:8081 for Gitlab
+* open http://localhost:8082 for JIRA
+* open http://localhost:8083 for Bitbucket
+
+# Architecture
+
+- JIRA stack runs the server and a separate postgres DB.
+- Bitbucket stack runs the server and a separate postgres DB.
+- Gitlab stack is the one at https://github.com/sameersbn/docker-gitlab
+
+**NOTE: Data are persisted at /dockerdata on host. Change it to your needs if you want at the docker-compose files**
+
+# Arcdhiu
 
 # Tips and useful scripts
 
