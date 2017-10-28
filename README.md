@@ -1,4 +1,4 @@
-# JIRA Bitbucket and Gitlab on docker containers with local storage
+﻿# JIRA Bitbucket and Gitlab on docker containers with local storage
 
 Using docker-compose v3
 
